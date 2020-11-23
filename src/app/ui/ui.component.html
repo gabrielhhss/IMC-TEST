@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+  </head>
+  <body>
+    <div align="center">
+    
+  </div>
+
+        
+    <div class="login-box">
+      
+      <h1>IMC</h1>
+      <form >
+        <!-- ESTATURA  -->
+        <label for="estatura">Estatura</label>
+        <input id="operator1" [(ngModel)]="operator1" type="number" class="form-control operator1" name="operator1" placeholder="0.0">
+        <!-- PESO  -->
+        <label for="peso">Peso (kg)</label>
+        <input id="operator2" [(ngModel)]="operator2" type="number" class="form-control operator2" name="operator2" placeholder="0.0">
+        <!-- EDAD -->
+        <label for="edad">Edad</label>
+        <input id="operator3" [(ngModel)]="operator3" type="number" class="form-control operator3" name="operator3" placeholder="0.0">
+      </form>
+        <form action="../../form-result.php" method="post" target="_blank">
+          <p>
+            Seleccionar:<br>
+            <label><input type="radio" name="seleccionar" value="hombre"> Hombre</label><br>
+            <label><input type="radio" name="seleccionar" value="mujer"> Mujer</label>
+          </p>
+          <p><input type="submit" (click)="calcularIMC()" value="Enviar datos"></p>
+          <textarea name="textarea" rows="10" cols="30"> {{result}}</textarea>
+        </form>
+    </div>
+    
+  </body>
+  
+</html>
