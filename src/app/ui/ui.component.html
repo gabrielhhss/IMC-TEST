@@ -22,16 +22,15 @@
         <!-- EDAD -->
         <label for="edad">Edad</label>
         <input id="operator3" [(ngModel)]="operator3" type="number" class="form-control operator3" name="operator3" placeholder="0.0">
+        <!-- GENERO -->
+        <label for="genero">Genero</label>
+        <input id="operator4" [(ngModel)]="operator4" type="text" class="form-control operator4" name="operator4" placeholder="hombre/mujer">
       </form>
         <form action="../../form-result.php" method="post" target="_blank">
-          <p>
-            Seleccionar:<br>
-            <label><input type="radio" name="seleccionar" value="hombre"> Hombre</label><br>
-            <label><input type="radio" name="seleccionar" value="mujer"> Mujer</label>
-          </p>
           <p><input type="submit" (click)="calcularIMC()" value="Enviar datos"></p>
           <textarea name="textarea" rows="10" cols="30"> {{result}}</textarea>
         </form>
+
     </div>
     
   </body>
